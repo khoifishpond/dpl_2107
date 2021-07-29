@@ -1,9 +1,10 @@
 class Library
-  attr_reader :name, :books, :authors
+  attr_reader :name, :books, :checked_out_books, :authors
 
   def initialize(name)
     @name = name
     @books = []
+    @checked_out_books = []
     @authors = []
   end
 
@@ -29,6 +30,7 @@ class Library
 
   def checkout(book)
     if @books.include?(book)
+      @checked_out_books << book
       @books.delete(book)
       true
     else
