@@ -68,10 +68,19 @@ describe Library do
     end
 
     it 'stores checked out books' do
+      expect(@dpl.checked_out_books).to eq([])
+
       @dpl.add_author(@charlotte_bronte)
       @dpl.checkout(@jane_eyre)
 
       expect(@dpl.checked_out_books).to eq([@jane_eyre])
+    end
+
+    it 'cannot checkout books that are currently checkedout' do
+      @dpl.add_author(@charlotte_bronte)
+      @dpl.checkout(@jane_eyre)
+
+      expect(@dpl.checkout(@jane_eyre)).to eq(false)
     end
   end
 end
