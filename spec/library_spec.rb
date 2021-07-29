@@ -93,5 +93,9 @@ describe Library do
 
       expect(@dpl.checked_out_books).to eq([])
     end
+
+    it 'has a most popular book' do
+      expect(@dpl.most_popular_book). to eq(@mockingbird)
+    end
   end
 end
