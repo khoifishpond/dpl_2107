@@ -17,9 +17,9 @@ class Author
     book = Book.new(
       {
         author_first_name: @first_name,
-        author_first_name: @last_name,
+        author_last_name: @last_name,
         title: title,
-        pubplication: publication_date
+        publication_date: publication_date
       }
     )
     @books << book
