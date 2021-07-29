@@ -55,5 +55,10 @@ describe Library do
     it "can find the publication years for an author's books" do
       expect(@dpl.publication_years_for(@charlotte_bronte)).to eq(["1847", "1857", "1853"])
     end
+
+    it 'cannot checkout books that do not exist in the library' do
+      expect(@dpl.checkout(@mockingbird)).to eq(false)
+      expect(@dpl.checkout(@jane_eyre)).to eq(false)
+    end
   end
 end
