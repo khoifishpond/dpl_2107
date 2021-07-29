@@ -50,5 +50,9 @@ describe Library do
 
       expect(@dpl.publication_time_frame_for(@charlotte_bronte)).to eq({start: "1847", end: "1857"})
     end
+
+    it "can find the publication years for an author's books" do
+      expect(@dpl.publication_years_for(@charlotte_bronte)).to eq(["1847", "1857", "1853"])
+    end
   end
 end
