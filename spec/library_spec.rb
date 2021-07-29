@@ -105,6 +105,7 @@ describe Library do
       @dpl.return(@mockingbird)
       @dpl.checkout(@mockingbird)
       @dpl.return(@mockingbird)
+      
       expect(@dpl.most_popular_book). to eq(@mockingbird)
     end
   end
