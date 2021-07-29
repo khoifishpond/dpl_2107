@@ -41,6 +41,11 @@ describe Author do
       
       expect(jane_eyre).to be_a(Book)
       expect(jane_eyre.title).to eq("Jane Eyre")
+
+      villette = @charlotte_bronte.write("Villette", "1853")
+
+      expect(villette).to be_a(Book)
+      expect(villette.title).to eq("Villette")
     end
   end
 end
