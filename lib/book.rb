@@ -10,4 +10,8 @@ class Book
     @title = params[:title]
     @publication_date = params[:publication_date]
   end
+
+  def author
+    @author_first_name + " " + @author_last_name
+  end
 end
