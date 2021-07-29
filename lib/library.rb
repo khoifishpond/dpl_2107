@@ -28,6 +28,11 @@ class Library
   end
 
   def checkout(book)
-    @books.include?(book)
+    if @books.include?(book)
+      @books.delete(book)
+      true
+    else
+      false
+    end
   end
 end
