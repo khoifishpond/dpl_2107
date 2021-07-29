@@ -95,6 +95,16 @@ describe Library do
     end
 
     it 'has a most popular book' do
+      @dpl.add_author(@charlotte_bronte)
+      @dpl.add_author(@harper_lee)
+      @dpl.checkout(@jane_eyre)
+      @dpl.checkout(@mockingbird)
+      @dpl.return(@jane_eyre)
+      @dpl.return(@mockingbird)
+      @dpl.checkout(@mockingbird)
+      @dpl.return(@mockingbird)
+      @dpl.checkout(@mockingbird)
+      @dpl.return(@mockingbird)
       expect(@dpl.most_popular_book). to eq(@mockingbird)
     end
   end
