@@ -59,6 +59,12 @@ describe Library do
     it 'cannot checkout books that do not exist in the library' do
       expect(@dpl.checkout(@mockingbird)).to eq(false)
       expect(@dpl.checkout(@jane_eyre)).to eq(false)
+
+      @dpl.add_author(@charlotte_bronte)
+      @dpl.add_author(@harper_lee)
+
+      expect(@dpl.checkout(@mockingbird)).to eq(true)
+      expect(@dpl.checkout(@jane_eyre)).to eq(true)
     end
   end
 end
