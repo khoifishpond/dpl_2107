@@ -66,5 +66,12 @@ describe Library do
       expect(@dpl.checkout(@mockingbird)).to eq(true)
       expect(@dpl.checkout(@jane_eyre)).to eq(true)
     end
+
+    it 'stores checked out books' do
+      @dpl.add_author(@charlotte_bronte)
+      @dpl.checkout(@jane_eyre)
+
+      expect(@dpl.checked_out_books).to eq([@jane_eyre])
+    end
   end
 end
