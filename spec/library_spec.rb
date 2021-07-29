@@ -49,6 +49,7 @@ describe Library do
       @dpl.add_author(@harper_lee)
 
       expect(@dpl.publication_time_frame_for(@charlotte_bronte)).to eq({start: "1847", end: "1857"})
+      expect(@dpl.publication_time_frame_for(@harper_lee)).to eq({start: "1960", end: "1960"})
     end
 
     it "can find the publication years for an author's books" do
