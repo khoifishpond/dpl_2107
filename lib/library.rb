@@ -29,12 +29,12 @@ class Library
   end
 
   def checkout(book)
-    if @books.include?(book)
+    if @checked_out_books.include?(book) || !@books.include?(book)
+      false
+    else
       @checked_out_books << book
       @books.delete(book)
       true
-    else
-      false
     end
   end
 end
