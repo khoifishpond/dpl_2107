@@ -44,5 +44,12 @@ describe Library do
       )
       @mockingbird = @harper_lee.write("To Kill a Mockingbird", "July 11, 1960")
     end
+
+    it 'can add authors' do
+      @dpl.add_author(@charlotte_bronte)
+      @dpl.add_author(@harper_lee)
+
+      expect(@dpl.authors).to eq([@charlotte_bronte, @harper_lee])
+    end
   end
 end
