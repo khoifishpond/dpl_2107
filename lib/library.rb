@@ -26,4 +26,8 @@ class Library
       book.publication_year
     end
   end
+
+  def checkout(book)
+    @books.include?(book)
+  end
 end
