@@ -18,5 +18,9 @@ describe Library do
     it 'starts with no books' do
       expect(@dpl.books).to eq([])
     end
+
+    it 'starts with no authors' do
+      expect(@dpl.authors).to eq([])
+    end
   end
 end
