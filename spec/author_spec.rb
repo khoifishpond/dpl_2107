@@ -46,6 +46,7 @@ describe Author do
 
       expect(villette).to be_a(Book)
       expect(villette.title).to eq("Villette")
+      expect(@charlotte_bronte.books).to eq([jane_eyre, villette])
     end
   end
 end
