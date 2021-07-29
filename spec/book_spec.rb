@@ -21,5 +21,9 @@ describe Book do
     it 'has a title' do
       expect(@book.title).to eq("To Kill a Mockingbird")
     end
+
+    it 'has an author' do
+      expect(@book.author).to eq("Harper Lee")
+    end
   end
 end
