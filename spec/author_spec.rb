@@ -5,12 +5,7 @@ require 'rspec'
 describe Author do
   context 'Attributes' do
     before(:each) do
-      @charlotte_bronte = Author.new(
-        {
-          first_name: "Charlotte",
-          last_name: "Bronte"
-        }
-      )
+      @charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     end
 
     it 'exists' do
@@ -28,12 +23,7 @@ describe Author do
 
   context 'Behvaiors' do
     before(:each) do
-      @charlotte_bronte = Author.new(
-        {
-          first_name: "Charlotte",
-          last_name: "Bronte"
-        }
-      )
+      @charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     end
 
     it 'can write books' do
