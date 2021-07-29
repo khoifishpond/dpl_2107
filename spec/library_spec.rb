@@ -1,4 +1,5 @@
 require './lib/library'
+require './lib/author'
 require 'rspec'
 
 describe Library do
