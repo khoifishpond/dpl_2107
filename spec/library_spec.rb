@@ -82,5 +82,16 @@ describe Library do
 
       expect(@dpl.checkout(@jane_eyre)).to eq(false)
     end
+
+    it 'returned books are no longer checked out' do
+      @dpl.add_author(@charlotte_bronte)
+      @dpl.checkout(@jane_eyre)
+
+      expect(@dpl.checked_out_books).to eq([@jane_eyre])
+
+      @dpl.return(@jane_eyre)
+
+      expect(@dpl.checked_out_books).to eq([])
+    end
   end
 end
