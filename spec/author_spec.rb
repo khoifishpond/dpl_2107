@@ -19,5 +19,9 @@ describe Author do
     it 'has a name' do
       expect(@charlotte_bronte.name).to eq("Charlotte Bronte")
     end
+
+    it 'starts with no books' do
+      expect(@charlotte_bronte.books).to eq([])
+    end
   end
 end
